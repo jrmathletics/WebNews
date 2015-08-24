@@ -13,7 +13,7 @@ namespace WebNews.Models.Blocks
         [CultureSpecific]
         [Display(
             Name = "Header",
-            Description = "Name field's description",
+            Description = "Textblock header",
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual String Header { get; set; }
@@ -21,7 +21,7 @@ namespace WebNews.Models.Blocks
         [CultureSpecific]
         [Display(
                     Name = "Body",
-                    Description = "Name field's description",
+                    Description = "Textblock body",
                     GroupName = SystemTabNames.Content,
                     Order = 2)]
         public virtual String Body { get; set; }

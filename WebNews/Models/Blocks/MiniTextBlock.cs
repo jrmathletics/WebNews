@@ -12,8 +12,8 @@ namespace WebNews.Models.Blocks
         
                 [CultureSpecific]
                 [Display(
-                    Name = "Body",
-                    Description = "Name field's description",
+                    Name = "MiniText",
+                    Description = "Small text without header",
                     GroupName = SystemTabNames.Content,
                     Order = 1)]
                 public virtual String Body { get; set; }

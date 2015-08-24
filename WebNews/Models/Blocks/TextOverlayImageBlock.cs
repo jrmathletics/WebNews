@@ -8,7 +8,7 @@ using EPiServer.Web;
 namespace WebNews.Models.Blocks
 {
     [ContentType(DisplayName = "HalvardBlock", GUID = "", Description = "")]
-    public class HalvardBlock : BlockData
+    public class TextOverlayImageBlock : BlockData
     {
 
         [Display(

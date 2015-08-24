@@ -243,10 +243,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
-    <Compile Include="Models\Blocks\ClientBlock.cs" />
-    <Compile Include="Models\Blocks\HalvardBlock.cs" />
+    <Compile Include="Models\Blocks\ClientLogoBlock.cs" />
+    <Compile Include="Models\Blocks\TextOverlayImageBlock.cs" />
     <Compile Include="Models\Blocks\ImageBlock.cs" />
-    <Compile Include="Models\Blocks\ImageTextBlock.cs" />
     <Compile Include="Models\Blocks\MiniTextBlock.cs" />
     <Compile Include="Models\Blocks\TextBlock.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
@@ -256,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
+    <Folder Include="Views\Blocks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\css\app.css" />
@@ -289,13 +289,12 @@
     <Content Include="Static\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Partials\Menu.cshtml" />
-    <Content Include="Views\Shared\HalvardBlock.cshtml" />
+    <Content Include="Views\Shared\TextOverlayImageBlock.cshtml" />
     <Content Include="Views\Shared\ImageBlock.cshtml" />
     <Content Include="Views\Shared\TextBlock.cshtml" />
     <Content Include="Views\Shared\MiniTextBlock.cshtml" />
-    <Content Include="Views\Shared\ClientBlock.cshtml" />
+    <Content Include="Views\Shared\ClientLogoBlock.cshtml" />
     <Content Include="Views\Shared\ButtonBlock.cshtml" />
-    <Content Include="Views\Shared\ImageTextBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
