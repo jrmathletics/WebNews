@@ -238,22 +238,32 @@
   <ItemGroup>
     <Compile Include="Business\Rendring\CustomViewEngine.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
+    <Compile Include="Controllers\ImageFileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\ButtonBlock.cs" />
+    <Compile Include="Models\Blocks\ClientBlock.cs" />
+    <Compile Include="Models\Blocks\HalvardBlock.cs" />
+    <Compile Include="Models\Blocks\ImageBlock.cs" />
+    <Compile Include="Models\Blocks\ImageTextBlock.cs" />
+    <Compile Include="Models\Blocks\MiniTextBlock.cs" />
+    <Compile Include="Models\Blocks\TextBlock.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
+    <Compile Include="Models\ViewModels\ImageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Blocks\" />
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Static\css\app.css" />
     <Content Include="Static\css\bootstrap-theme.css" />
     <Content Include="Static\css\bootstrap-theme.min.css" />
     <Content Include="Static\css\bootstrap.css" />
     <Content Include="Static\css\bootstrap.min.css" />
+    <Content Include="Static\css\navbar-fixed-top.css" />
     <Content Include="Static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Static\js\bootstrap.js" />
     <Content Include="Static\js\bootstrap.min.js" />
@@ -278,6 +288,14 @@
     <Content Include="Static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Static\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Partials\Menu.cshtml" />
+    <Content Include="Views\Shared\HalvardBlock.cshtml" />
+    <Content Include="Views\Shared\ImageBlock.cshtml" />
+    <Content Include="Views\Shared\TextBlock.cshtml" />
+    <Content Include="Views\Shared\MiniTextBlock.cshtml" />
+    <Content Include="Views\Shared\ClientBlock.cshtml" />
+    <Content Include="Views\Shared\ButtonBlock.cshtml" />
+    <Content Include="Views\Shared\ImageTextBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

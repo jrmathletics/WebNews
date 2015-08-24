@@ -7,17 +7,16 @@ using EPiServer.SpecializedProperties;
 
 namespace WebNews.Models.Pages
 {
-    [ContentType(DisplayName = "HomePage", GUID = "538873f2-bcd1-4709-b066-f73f3fb669d3", Description = "")]
+    [ContentType(DisplayName = "HomePage", GUID = "A6872269-0173-4489-8640-190A564B65CB", Description = "")]
     public class HomePage : PageData
     {
         
-                [CultureSpecific]
                 [Display(
-                    Name = "Main body",
-                    Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
+                    Name = "Main ContentArea",
+                    Description = "Contentarea for information",
                     GroupName = SystemTabNames.Content,
                     Order = 1)]
-                public virtual XhtmlString MainBody { get; set; }
+                public virtual ContentArea MainContentArea { get; set; }
          
     }
 }

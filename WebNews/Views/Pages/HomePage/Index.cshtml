@@ -1,4 +1,7 @@
-﻿@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+﻿@model WebNews.Models.Pages.HomePage
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<h1>Hello, world! fra startsiden</h1>
-
+<h1>
+    @Html.PropertyFor(x => x.PageName)
+</h1>
+<p>@Html.PropertyFor(x =>x.MainContentArea)</p>

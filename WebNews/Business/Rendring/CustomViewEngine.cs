@@ -11,7 +11,8 @@ namespace WebNews.Business.Rendring
         public CustomViewEngine()
         {
             var viewLocations = new[] {
-            "~/Views/Pages/{1}/{0}.cshtml"
+            "~/Views/Pages/{1}/{0}.cshtml",
+            "~/Views/{1}/{0}.cshtml"
         };
 
             this.PartialViewLocationFormats = viewLocations;
