@@ -5,11 +5,11 @@
 @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <div>
+    <h1>@Model.Header</h1>
+    <h3>@Model.IntroText</h3>
     <div class="image-box">
         @Html.PropertyFor(m => m.PersonImage)
-    </div><br />
-    @Html.PropertyFor(m => m.Header)<br/>
-    @Html.PropertyFor(m => m.IntroText)<br/>
+    </div><br/>
     @Html.PropertyFor(m => m.FirstName)
     @Html.PropertyFor(m => m.LastName)<br/>
     @Html.PropertyFor(m => m.Street)<br/>

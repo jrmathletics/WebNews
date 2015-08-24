@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model WebNews.Models.Pages.PortalPage
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div>
+    <h1>@Model.Header</h1>
+       @Model.IntroText
+    @Html.PropertyFor(m => m.PortalContentArea)
+</div>

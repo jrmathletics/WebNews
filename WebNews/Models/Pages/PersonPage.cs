@@ -60,7 +60,7 @@ namespace WebNews.Models.Pages
         [Display(
             Name = "E-postadresse",
             GroupName = SystemTabNames.Content,
-            Order = 7)]
+            Order = 8)]
         [EmailAddress(ErrorMessage = "Ugyldig e-postadresse")]
         [DataType(DataType.EmailAddress)]
         public virtual string EmailAddress { get; set; }
@@ -70,7 +70,7 @@ namespace WebNews.Models.Pages
         [Display(
             Name = "Telefonnummer",
             GroupName = SystemTabNames.Content,
-            Order = 7)]
+            Order = 9)]
         [DataType(DataType.PhoneNumber)]
         [RegularExpression("^[0-9]{8}$")]
 
@@ -81,7 +81,7 @@ namespace WebNews.Models.Pages
         [Display(
             Name = "Personbilde",
             GroupName = SystemTabNames.Content,
-            Order = 7)]
+            Order = 10)]
         [UIHint(UIHint.Image)]
         public virtual ContentReference PersonImage { get; set; }
 
