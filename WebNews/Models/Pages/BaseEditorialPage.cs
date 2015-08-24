@@ -14,18 +14,17 @@ namespace WebNews.Models.Pages
 
         [CultureSpecific]
         [Display(
-        Name = "Overskrift",
-        GroupName = SystemTabNames.Content,
-        Order = 1)]
+            Name = "Overskrift",
+            GroupName = SystemTabNames.Content,
+            Order = 1)]
         public virtual string Header { get; set; }
 
-        [UIHint(UIHint.LongString)]
-        [CultureSpecific]
         [Display(
-                    Name = "Ingress",
-                    GroupName = SystemTabNames.Content,
-                    Order = 2)]
-        public virtual XhtmlString IntroText { get; set; }
+            Name = "Ingress",
+            GroupName = SystemTabNames.Content,
+            Order = 2)]
+        [UIHint(UIHint.LongString)]
+        public virtual string IntroText { get; set; }
 
     }
 }

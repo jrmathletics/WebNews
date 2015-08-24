@@ -252,6 +252,7 @@
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Pages\ArticlePage.cs" />
     <Compile Include="Models\Pages\BaseEditorialPage.cs" />
+    <Compile Include="Models\Pages\FolderPage.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
     <Compile Include="Models\ViewModels\ImageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
