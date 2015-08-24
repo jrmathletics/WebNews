@@ -1,0 +1,9 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model WebNews.Models.Pages.ListPage
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<div>
+  @Html.PropertyFor(m => m.MainBody)
+</div>

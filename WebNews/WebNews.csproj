@@ -240,6 +240,7 @@
     <Compile Include="Controllers\ArticlePageController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ImageFileController.cs" />
+    <Compile Include="Controllers\ListPageController.cs" />
     <Compile Include="Controllers\PersonPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -255,6 +256,7 @@
     <Compile Include="Models\Pages\BaseEditorialPage.cs" />
     <Compile Include="Models\Pages\FolderPage.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
+    <Compile Include="Models\Pages\ListPage.cs" />
     <Compile Include="Models\Pages\PersonPage.cs" />
     <Compile Include="Models\ViewModels\ImageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -303,6 +305,7 @@
     <Content Include="Views\Shared\ButtonBlock.cshtml" />
     <Content Include="Views\Pages\ArticlePage\Index.cshtml" />
     <Content Include="Views\Pages\PersonPage\Index.cshtml" />
+    <Content Include="Views\Pages\ListPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
