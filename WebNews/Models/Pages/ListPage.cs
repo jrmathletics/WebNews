@@ -11,12 +11,12 @@ namespace WebNews.Models.Pages
     public class ListPage : BaseEditorialPage
     {
         
-                [CultureSpecific]
-                [Display(
-                    Name = "Main body",
-                    GroupName = SystemTabNames.Content,
-                    Order = 1)]
-                public virtual string MainBody { get; set; }
+        [CultureSpecific]
+        [Display(
+            Name ="Main",
+            GroupName = SystemTabNames.Content,
+            Order = 3)]
+        public virtual XhtmlString MainBody { get; set; }
          
     }
 }

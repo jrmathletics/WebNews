@@ -1,9 +1,16 @@
 ﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
 
-@model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.ListPage>
+@model WebNews.Models.ViewModels.ListPageViewModel
 @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <div>
-  @Model.CurrentPage.MainBody
+ 
+    <ul>
+        @foreach (var page in Model.ChildPages)
+        {
+        <li>@Html.ContentLink(page)</li>
+        }
+    </ul>
+    
 </div>
