@@ -71,7 +71,6 @@ namespace WebNews.Models.Pages
             Name = "Telefonnummer",
             GroupName = SystemTabNames.Content,
             Order = 9)]
-        [DataType(DataType.PhoneNumber)]
         [RegularExpression("^[0-9]{8}$")]
 
         public virtual string PhoneNumber { get; set; }

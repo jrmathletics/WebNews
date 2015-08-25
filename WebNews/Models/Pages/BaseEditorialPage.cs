@@ -8,8 +8,7 @@ using EPiServer.Web;
 
 namespace WebNews.Models.Pages
 {
-    [ContentType(DisplayName = "BaseEditorialPage", GUID = "b8512201-40cb-4cb9-b9ca-0fff38ee122e", Description = "")]
-    public abstract class BaseEditorialPage : PageData
+    public abstract class BaseEditorialPage : BasePage
     {
 
         [Display(
@@ -18,6 +17,12 @@ namespace WebNews.Models.Pages
             Order = 2)]
         [UIHint(UIHint.LongString)]
         public virtual string IntroText { get; set; }
-        
+
+        [CultureSpecific]
+        [Display(
+                    Name = "Artikkeltekst",
+                    GroupName = SystemTabNames.Content,
+                    Order = 3)]
+        public virtual XhtmlString BodyText { get; set; }
     }
 }

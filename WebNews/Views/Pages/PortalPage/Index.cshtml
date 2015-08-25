@@ -2,10 +2,10 @@
 @using EPiServer.Web.Mvc.Html
 
 @model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.PortalPage>
-@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+    @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<div>
-    <h1>@Model.CurrentPage.PageName</h1>
-       @Model.CurrentPage.IntroText
-    @Html.PropertyFor(m => m.CurrentPage.PortalContentArea)
-</div>
+    <div>
+        <h1>@Model.CurrentPage.PageName</h1>
+        @Model.CurrentPage.IntroText
+        @Html.PropertyFor(m => m.CurrentPage.PortalContentArea)
+    </div>

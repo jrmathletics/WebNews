@@ -1,19 +1,13 @@
-﻿using EPiServer.Core;
+﻿using System.Collections.Generic;
+using EPiServer.Core;
 using WebNews.Models.Pages;
 
 namespace WebNews.Models.ViewModels
 {
-    /// <summary>
-    /// Defines common characteristics for view models for pages, including properties used by layout files.
-    /// </summary>
-    /// <remarks>
-    /// Views which should handle several page types (T) can use this interface as model type rather than the
-    /// concrete PageViewModel class, utilizing the that this interface is covariant.
-    /// </remarks>
     public interface IPageViewModel<out T> where T : BaseEditorialPage
     {
         T CurrentPage { get; }
         XhtmlString FooterText { get; set; }
-        
+        List<PageData> MenuPages { get; set; }
     }
 }

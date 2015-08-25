@@ -16,7 +16,7 @@ namespace WebNews.Models.Pages
             Name ="Main",
             GroupName = SystemTabNames.Content,
             Order = 3)]
-        public virtual XhtmlString MainBody { get; set; }
+        public virtual XhtmlString MainBody { get;set; }
          
     }
 }
