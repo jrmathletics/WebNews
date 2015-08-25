@@ -12,13 +12,6 @@ namespace WebNews.Models.Pages
     public abstract class BaseEditorialPage : PageData
     {
 
-        [CultureSpecific]
-        [Display(
-            Name = "Overskrift",
-            GroupName = SystemTabNames.Content,
-            Order = 1)]
-        public virtual string Header { get; set; }
-
         [Display(
             Name = "Ingress",
             GroupName = SystemTabNames.Content,

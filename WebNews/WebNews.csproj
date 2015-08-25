@@ -237,6 +237,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Business\Rendring\CustomViewEngine.cs" />
+    <Compile Include="Business\UIDescriptors\FolderPageUIDescriptor.cs" />
     <Compile Include="Controllers\ArticlePageController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ImageFileController.cs" />
@@ -246,8 +247,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\BaseBlock.cs" />
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
     <Compile Include="Models\Blocks\ClientLogoBlock.cs" />
+    <Compile Include="Models\Blocks\ImageWithHeaderBodyBlock.cs" />
     <Compile Include="Models\Blocks\TextOverlayImageBlock.cs" />
     <Compile Include="Models\Blocks\ImageBlock.cs" />
     <Compile Include="Models\Blocks\MiniTextBlock.cs" />
@@ -267,12 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\Blocks\ButtonBlock\" />
-    <Folder Include="Views\Blocks\ClientLogoBlock\" />
-    <Folder Include="Views\Blocks\ImageBlock\" />
-    <Folder Include="Views\Blocks\MiniTextBlock\" />
-    <Folder Include="Views\Blocks\TextBlock\" />
-    <Folder Include="Views\Blocks\TextOverlayImageBlock\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\css\app.css" />
@@ -306,12 +303,12 @@
     <Content Include="Static\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Partials\Menu.cshtml" />
-    <Content Include="Views\Shared\TextOverlayImageBlock.cshtml" />
-    <Content Include="Views\Shared\ImageBlock.cshtml" />
-    <Content Include="Views\Shared\TextBlock.cshtml" />
-    <Content Include="Views\Shared\MiniTextBlock.cshtml" />
-    <Content Include="Views\Shared\ClientLogoBlock.cshtml" />
-    <Content Include="Views\Shared\ButtonBlock.cshtml" />
+    <Content Include="Views\Blocks\TextOverlayImageBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ImageBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\TextBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\MiniTextBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ClientLogoBlock\Index.cshtml" />
+    <Content Include="Views\Blocks\ButtonBlock\Index.cshtml" />
     <Content Include="Views\Pages\ArticlePage\Index.cshtml" />
     <Content Include="Views\Pages\PersonPage\Index.cshtml" />
     <Content Include="Views\Pages\ListPage\Index.cshtml" />

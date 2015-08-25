@@ -12,7 +12,7 @@ namespace WebNews.Models.Pages
     [ContentType(DisplayName = "FolderPage", GUID = "c3886e90-7404-4c62-89a0-70d339c20a70", Description = "",
         AvailableInEditMode = true)]
 
-    public class FolderPage : PageData, IContentData
+    public class FolderPage : BaseEditorialPage
     {
         public override void SetDefaultValues(ContentType contentType)
         {

@@ -1,9 +1,9 @@
 ﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
 
-@model WebNews.Models.Pages.ListPage
+@model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.ListPage>
 @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <div>
-  @Model.MainBody
+  @Model.CurrentPage.MainBody
 </div>

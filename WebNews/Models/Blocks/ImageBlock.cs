@@ -8,7 +8,7 @@ using EPiServer.Web;
 namespace WebNews.Models.Blocks
 {
     [ContentType(DisplayName = "ImageBlock", GUID = "729ec0db-e88e-45fd-9c80-1778a0b43055", Description = "")]
-    public class ImageBlock : BlockData
+    public class ImageBlock : BaseBlock
     {
         [Display(
                 GroupName = SystemTabNames.Content,

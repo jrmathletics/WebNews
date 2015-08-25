@@ -7,8 +7,8 @@ using EPiServer.Web;
 
 namespace WebNews.Models.Blocks
 {
-    [ContentType(DisplayName = "ClientBlock", GUID = "2d2d93fc-3b42-4b8b-a35e-cd5eaf88608b", Description = "")]
-    public class ClientLogoBlock : BlockData
+    [ContentType(DisplayName = "ClientLogoBlock", GUID = "2d2d93fc-3b42-4b8b-a35e-cd5eaf88608b", Description = "")]
+    public class ClientLogoBlock : BaseBlock
     {
         [Display(
                 GroupName = SystemTabNames.Content,

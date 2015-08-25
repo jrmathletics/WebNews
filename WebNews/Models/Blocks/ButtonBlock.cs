@@ -8,7 +8,7 @@ using EPiServer.DataAnnotations;
 namespace WebNews.Models.Blocks
 {
     [ContentType(DisplayName = "ButtonBlock", GUID = "31dff3e2-3ec8-4335-b5b8-24a78b13dee0", Description = "")]
-    public class ButtonBlock : BlockData
+    public class ButtonBlock : BaseBlock
     {
         [Display(
      GroupName = SystemTabNames.Content,

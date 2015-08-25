@@ -13,6 +13,7 @@ namespace WebNews.Models.ViewModels
     public interface IPageViewModel<out T> where T : BaseEditorialPage
     {
         T CurrentPage { get; }
-        IContent Section { get; set; }
+        XhtmlString FooterText { get; set; }
+        
     }
 }

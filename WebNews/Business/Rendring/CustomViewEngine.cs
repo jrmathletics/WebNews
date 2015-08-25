@@ -8,15 +8,17 @@ namespace WebNews.Business.Rendring
 {
     public class CustomViewEngine : RazorViewEngine
     {
-        public CustomViewEngine()
+        public static readonly string[] CustomViewEngineFormats = new[]
         {
-            var viewLocations = new[] {
-            "~/Views/Pages/{1}/{0}.cshtml",
-            "~/Views/{1}/{0}.cshtml"
+            "~/Views/Blocks/{0}/Index.cshtml",
+            "~/Views/Pages/{1}/{0}.cshtml"
         };
 
-            this.PartialViewLocationFormats = viewLocations;
-            this.ViewLocationFormats = viewLocations;
+        public CustomViewEngine()
+        {
+            base.PartialViewLocationFormats = base.PartialViewLocationFormats.Union(CustomViewEngineFormats).ToArray();
+            base.ViewLocationFormats = base.ViewLocationFormats.Union(CustomViewEngineFormats).ToArray();
         }
     }
+
 }

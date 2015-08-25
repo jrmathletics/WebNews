@@ -7,8 +7,8 @@ using EPiServer.Web;
 
 namespace WebNews.Models.Blocks
 {
-    [ContentType(DisplayName = "HalvardBlock", GUID = "", Description = "")]
-    public class TextOverlayImageBlock : BlockData
+    [ContentType(DisplayName = "TextOverlayImageBlock", GUID = "", Description = "")]
+    public class TextOverlayImageBlock : BaseBlock
     {
 
         [Display(
@@ -18,8 +18,6 @@ namespace WebNews.Models.Blocks
         public virtual ContentReference BlockImage { get; set; }
 
         public virtual string ImageOverlayText { get; set; }
-        public virtual string UnderImageText { get; set; }
-
 
     }
 }

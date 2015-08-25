@@ -1,21 +1,21 @@
 ﻿@using EPiServer.Core
 @using EPiServer.Web.Mvc.Html
 
-@model WebNews.Models.Pages.PersonPage
+@model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.PersonPage>
 @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <div>
-    <h1>@Model.Header</h1>
-    <h3>@Model.IntroText</h3>
+    <h1>@Model.CurrentPage.PageName</h1>
+    <h3>@Model.CurrentPage.IntroText</h3>
     <div class="image-box">
-        @Html.PropertyFor(m => m.PersonImage)
+        @Html.PropertyFor(m => m.CurrentPage.PersonImage)
     </div><br/>
-    @Html.PropertyFor(m => m.FirstName)
-    @Html.PropertyFor(m => m.LastName)<br/>
-    @Html.PropertyFor(m => m.Street)<br/>
-    @Html.PropertyFor(m => m.PostalCode)
-    @Html.PropertyFor(m => m.City)<br/>
-    @Html.PropertyFor(m => m.EmailAddress)<br/>
-    @Html.PropertyFor(m => m.PhoneNumber)<br/>
+    @Html.PropertyFor(m => m.CurrentPage.FirstName)
+    @Html.PropertyFor(m => m.CurrentPage.LastName)<br/>
+    @Html.PropertyFor(m => m.CurrentPage.Street)<br/>
+    @Html.PropertyFor(m => m.CurrentPage.PostalCode)
+    @Html.PropertyFor(m => m.CurrentPage.City)<br/>
+    @Html.PropertyFor(m => m.CurrentPage.EmailAddress)<br/>
+    @Html.PropertyFor(m => m.CurrentPage.PhoneNumber)<br/>
 
 </div>
