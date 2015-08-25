@@ -25,6 +25,6 @@ namespace WebNews.Models.Pages
             Order = 2)]
         [UIHint(UIHint.LongString)]
         public virtual string IntroText { get; set; }
-
+        
     }
 }

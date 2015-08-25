@@ -267,7 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\Blocks\" />
+    <Folder Include="Views\Blocks\ButtonBlock\" />
+    <Folder Include="Views\Blocks\ClientLogoBlock\" />
+    <Folder Include="Views\Blocks\ImageBlock\" />
+    <Folder Include="Views\Blocks\MiniTextBlock\" />
+    <Folder Include="Views\Blocks\TextBlock\" />
+    <Folder Include="Views\Blocks\TextOverlayImageBlock\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\css\app.css" />
