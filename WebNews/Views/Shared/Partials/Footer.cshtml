@@ -1,6 +1,12 @@
 ﻿@model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.BaseEditorialPage>
-<div>
-    <footer class="footer">
-        @Model.FooterText
-    </footer>
-</div>
+    <div>
+        <footer class="footer">
+            @{
+            if (@Model.CurrentPage.PageTypeName == "PortalPage")
+            {
+                @Html.PropertyFor(m => m.FooterText);
+            }
+            @Model.FooterText
+            }
+        </footer>
+    </div>
