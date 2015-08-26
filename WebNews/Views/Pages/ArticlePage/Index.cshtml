@@ -4,7 +4,6 @@
 @model WebNews.Models.ViewModels.IPageViewModel<WebNews.Models.Pages.ArticlePage>
 
     @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
-    <h1>@Html.PropertyFor(m => m.CurrentPage.PageName)</h1>
-
+    
     @Html.PropertyFor(m => m.CurrentPage.IntroText)
     @Html.PropertyFor(m => m.CurrentPage.BodyText)

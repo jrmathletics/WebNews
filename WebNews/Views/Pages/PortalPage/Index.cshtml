@@ -5,7 +5,6 @@
     @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
     <div>
-        <h1>@Model.CurrentPage.PageName</h1>
-        @Model.CurrentPage.IntroText
+        @Html.PropertyFor(m => m.CurrentPage.IntroText);
         @Html.PropertyFor(m => m.CurrentPage.PortalContentArea)
     </div>

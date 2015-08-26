@@ -317,6 +317,7 @@
     <Content Include="Views\Pages\ListPage\Index.cshtml" />
     <Content Include="Views\Pages\PortalPage\Index.cshtml" />
     <Content Include="Views\Shared\Partials\Footer.cshtml" />
+    <Content Include="Views\Shared\Partials\BreadCrumbs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

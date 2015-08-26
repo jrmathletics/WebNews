@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using EPiServer;
 using EPiServer.Core;
@@ -14,6 +15,7 @@ namespace WebNews.Models.ViewModels
         public XhtmlString FooterText { get; set; }
         public List<PageData> MenuPages { get; set; }
         public IContentLoader ServiceLocator { get; set; }
+        public List<PageData> PageCrumbs { get; set; }
 
         public PageViewModel(T currentPage)
         {
