@@ -11,9 +11,7 @@ namespace WebNews.Models.ViewModels
     {
         public ListPageViewModel(ListPage currentPage) : base(currentPage)
         {
-
         }
-
         public List<PageData> ChildPages { get; set; }
     }
 }
