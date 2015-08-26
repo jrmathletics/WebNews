@@ -39,6 +39,7 @@ namespace WebNews.Models.ViewModels
                 if (currentPortalPage.CustomFooterText == null && closestPortalParent.CustomFooterText == null) { return startPage.FooterText; }
                 if (currentPortalPage.CustomFooterText == null) { return closestPortalParent.CustomFooterText; }
                 if (currentPortalPage.CustomFooterText != null) { return currentPortalPage.CustomFooterText; }
+
                 return startPage.FooterText;
 
             }

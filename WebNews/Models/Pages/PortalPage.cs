@@ -18,11 +18,10 @@ namespace WebNews.Models.Pages
             Order = 3)]
         public virtual ContentArea PortalContentArea { get; set; }
 
-        [CultureSpecific]
         [Display(
-            Name = "CustomFooterText",
-            GroupName = SystemTabNames.Content,
-            Order = 3)]
+             Name = "CustomFooterText",
+             GroupName = SystemTabNames.Content,
+             Order = 3)]
         public virtual XhtmlString CustomFooterText { get; set; }
 
     }

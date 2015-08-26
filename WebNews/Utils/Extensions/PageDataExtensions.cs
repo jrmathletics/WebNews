@@ -42,6 +42,5 @@ namespace WebNews.Utils.Extensions
             return parents;
         }
 
-        
     }
 }
