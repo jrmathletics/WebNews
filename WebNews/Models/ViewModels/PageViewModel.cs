@@ -25,18 +25,36 @@ namespace WebNews.Models.ViewModels
             PageCrumbs = currentPage.GetParentPagesOfType<BasePage>()
                                     .FilterForVisitorAndMenu()
                                     .ToList();
-            FooterText = GetFooterText();
+            FooterText = GetFooterText(currentPage);
         }
-        public XhtmlString GetFooterText()
+        public XhtmlString GetFooterText(BasePage currentPage)
         {
+
+            var closestPortalParent = currentPage.GetParentPagesOfType<PortalPage>().SingleOrDefault() as PortalPage;
             var startPage = ServiceLocator.Get<HomePage>(ContentReference.StartPage);
-            return startPage.FooterText;
+            if (currentPage is PortalPage)
+            {
+                var current = currentPage as PortalPage;
+                if (closestPortalParent == null && current.CustomFooterText == null) { return startPage.FooterText; }
+                if (current.CustomFooterText == null && closestPortalParent.CustomFooterText == null) { return startPage.FooterText; }
+                if (current.CustomFooterText == null) { return closestPortalParent.CustomFooterText; }
+                if (current.CustomFooterText != null) { return current.CustomFooterText; }
+                return startPage.FooterText;
+
+            }
+            if (closestPortalParent == null) { return startPage.FooterText; }
+            XhtmlString closestPortalFooter = closestPortalParent.CustomFooterText;
+            if (closestPortalFooter == null) { return startPage.FooterText; }
+            return closestPortalFooter;
+
         }
+
         public List<PageData> GetMenuPages()
         {
             var children = ServiceLocator.GetChildren<PageData>(ContentReference.StartPage).ToList();
             return children.FilterForVisitorAndMenu().ToList();
         }
+
 
     }
 

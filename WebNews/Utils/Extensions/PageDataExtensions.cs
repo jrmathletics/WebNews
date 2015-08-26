@@ -12,6 +12,7 @@ namespace WebNews.Utils.Extensions
 {
     public static class PageDataExtensions
     {
+
         public static IEnumerable<PageData> FilterForVisitorAndMenu(this IEnumerable<PageData> pageList)
         {
             if (pageList == null)
@@ -41,5 +42,6 @@ namespace WebNews.Utils.Extensions
             return parents;
         }
 
+        
     }
 }
