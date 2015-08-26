@@ -34,11 +34,11 @@ namespace WebNews.Models.ViewModels
             var startPage = ServiceLocator.Get<HomePage>(ContentReference.StartPage);
             if (currentPage is PortalPage)
             {
-                var current = currentPage as PortalPage;
-                if (closestPortalParent == null && current.CustomFooterText == null) { return startPage.FooterText; }
-                if (current.CustomFooterText == null && closestPortalParent.CustomFooterText == null) { return startPage.FooterText; }
-                if (current.CustomFooterText == null) { return closestPortalParent.CustomFooterText; }
-                if (current.CustomFooterText != null) { return current.CustomFooterText; }
+                var currentPortalPage = currentPage as PortalPage;
+                if (closestPortalParent == null && currentPortalPage.CustomFooterText == null) { return startPage.FooterText; }
+                if (currentPortalPage.CustomFooterText == null && closestPortalParent.CustomFooterText == null) { return startPage.FooterText; }
+                if (currentPortalPage.CustomFooterText == null) { return closestPortalParent.CustomFooterText; }
+                if (currentPortalPage.CustomFooterText != null) { return currentPortalPage.CustomFooterText; }
                 return startPage.FooterText;
 
             }
