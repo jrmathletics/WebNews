@@ -4,9 +4,9 @@
     @foreach (var page in Model.PageCrumbs)
     {
 
-    if (PageReference.StartPage.ID != page.PageLink.ID)
+    if (ContentReference.StartPage.ID != page.PageLink.ID)
     {
-    <i> --></i>
+        <b>--></b>
     }
     @Html.ContentLink(page)
     }

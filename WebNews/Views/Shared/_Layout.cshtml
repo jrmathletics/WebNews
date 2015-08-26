@@ -17,7 +17,7 @@
             @Html.Partial("~/Views/Shared/Partials/Menu.cshtml", Model)
             @Html.Partial("~/Views/Shared/Partials/BreadCrumbs.cshtml", Model)
             <h1>@Html.PropertyFor(m => m.CurrentPage.PageName)</h1>
-            @Model.CurrentPage.Created.ToString("dd/MM/yyyy") - @Model.CurrentPage.CreatedBy
+            @Model.CurrentPage.Created.ToString("dd/MM/yyyy") - @Model.CurrentPage.CreatedBy<br/>
             @RenderBody()
             <hr />
             @Html.Partial("~/Views/Shared/Partials/Footer.cshtml", Model)

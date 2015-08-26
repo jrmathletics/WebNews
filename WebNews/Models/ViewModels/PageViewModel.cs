@@ -22,7 +22,9 @@ namespace WebNews.Models.ViewModels
             ServiceLocator = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IContentLoader>();
             CurrentPage = currentPage;
             MenuPages = GetMenuPages();
-            PageCrumbs = GetPageCrumbs(currentPage);
+            PageCrumbs = currentPage.GetParentPagesOfType<BasePage>()
+                                    .FilterForVisitorAndMenu()
+                                    .ToList();
             FooterText = GetFooterText();
         }
         public XhtmlString GetFooterText()
@@ -36,15 +38,6 @@ namespace WebNews.Models.ViewModels
             return children.FilterForVisitorAndMenu().ToList();
         }
 
-        public List<PageData> GetPageCrumbs(BasePage currentPage)
-        {
-            var parents = ServiceLocator.GetAncestors(currentPage.ContentLink)
-                                        .Cast<PageData>()
-                                        .Where(x => x is BasePage)
-                                        .ToList();
-            parents.Reverse();
-            return parents;
-        }
     }
 
     public static class PageViewModel
