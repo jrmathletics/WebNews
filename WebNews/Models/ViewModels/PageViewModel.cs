@@ -5,6 +5,7 @@ using EPiServer;
 using EPiServer.Core;
 using WebNews.Models.Pages;
 using WebNews.Utils.Extensions;
+using PageDataExtensions = WebNews.Utils.Extensions.PageDataExtensions;
 
 namespace WebNews.Models.ViewModels
 {
@@ -12,42 +13,42 @@ namespace WebNews.Models.ViewModels
 
     {
         public T CurrentPage { get; private set; }
-        public XhtmlString FooterText { get; set; }
+        public XhtmlString ViewModelFooterText { get; set; }
         public List<PageData> MenuPages { get; set; }
         public IContentLoader ServiceLocator { get; set; }
         public List<PageData> PageCrumbs { get; set; }
 
         public PageViewModel(T currentPage)
         {
-            ServiceLocator = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IContentLoader>();
+            ServiceLocator = EPiServer
+                             .ServiceLocation
+                             .ServiceLocator
+                             .Current.GetInstance<IContentLoader>();
             CurrentPage = currentPage;
             MenuPages = GetMenuPages();
             PageCrumbs = currentPage.GetParentPagesOfType<BasePage>()
                                     .FilterForVisitorAndMenu()
                                     .ToList();
-            FooterText = GetFooterText(currentPage);
+            ViewModelFooterText = GetFooterText(currentPage);
+
         }
-        public XhtmlString GetFooterText(BasePage currentPage)
+
+        private XhtmlString GetFooterText(T currentPage)
         {
+            var currentPageAsFooterPage = currentPage as IFooterPage;
+            if (currentPageAsFooterPage?.FooterText != null)
+                return currentPageAsFooterPage.FooterText;
 
-            var closestPortalParent = currentPage.GetParentPagesOfType<PortalPage>().SingleOrDefault() as PortalPage;
-            var startPage = ServiceLocator.Get<HomePage>(ContentReference.StartPage);
-            if (currentPage is PortalPage)
-            {
-                var currentPortalPage = currentPage as PortalPage;
-                if (closestPortalParent == null && currentPortalPage.CustomFooterText == null) { return startPage.FooterText; }
-                if (currentPortalPage.CustomFooterText == null && closestPortalParent.CustomFooterText == null) { return startPage.FooterText; }
-                if (currentPortalPage.CustomFooterText == null) { return closestPortalParent.CustomFooterText; }
-                if (currentPortalPage.CustomFooterText != null) { return currentPortalPage.CustomFooterText; }
+            var footerPages = CurrentPage.GetParentPagesOfType<BasePage>()
+                .FilterForVisitorAndMenu()
+                .Where(x => x is IFooterPage)
+                .Cast<IFooterPage>();
 
-                return startPage.FooterText;
+            var parentFooterPage = footerPages.FirstOrDefault(page => page.FooterText != null);
 
-            }
-            if (closestPortalParent == null) { return startPage.FooterText; }
-            XhtmlString closestPortalFooter = closestPortalParent.CustomFooterText;
-            if (closestPortalFooter == null) { return startPage.FooterText; }
-            return closestPortalFooter;
-
+            return (parentFooterPage != null)
+                ? parentFooterPage.FooterText
+                : new XhtmlString("");
         }
 
         public List<PageData> GetMenuPages()

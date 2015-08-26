@@ -8,7 +8,7 @@ using EPiServer.SpecializedProperties;
 namespace WebNews.Models.Pages
 {
     [ContentType(DisplayName = "PortalPage", GUID = "6aeec750-dec5-4af4-92df-cb20a3c3dedd", Description = "")]
-    public class PortalPage : BaseEditorialPage
+    public class PortalPage : BaseEditorialPage, IFooterPage
     {
 
         [CultureSpecific]
@@ -18,11 +18,12 @@ namespace WebNews.Models.Pages
             Order = 3)]
         public virtual ContentArea PortalContentArea { get; set; }
 
+        [Editable(true)]
         [Display(
              Name = "CustomFooterText",
              GroupName = SystemTabNames.Content,
              Order = 3)]
-        public virtual XhtmlString CustomFooterText { get; set; }
+        public virtual XhtmlString FooterText { get; set; }
 
     }
 }

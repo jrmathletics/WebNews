@@ -30,15 +30,25 @@ namespace WebNews.Utils.Extensions
             return filterdPages;
         }
 
-        public static List<PageData> GetParentPagesOfType<T>(this PageData currentPage) where T : PageData
+        public enum ParentSortOrder
+        {
+            TopDown = 0,
+            BottomUp = 1
+        }
+
+        public static List<PageData> GetParentPagesOfType<T>(this PageData currentPage,
+            ParentSortOrder sortOrder = ParentSortOrder.TopDown) where T : PageData
         {
             var serviceLocator = ServiceLocator.Current.GetInstance<IContentLoader>();
 
             var parents = serviceLocator.GetAncestors(currentPage.ContentLink)
-                                        .Cast<PageData>()
-                                        .Where(x => x is T)
-                                        .ToList();
-            parents.Reverse();
+                .Cast<PageData>()
+                .Where(x => x is T)
+                .ToList();
+
+            if (sortOrder == ParentSortOrder.TopDown)
+                parents.Reverse();
+
             return parents;
         }
 

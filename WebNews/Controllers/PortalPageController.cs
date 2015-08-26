@@ -9,6 +9,9 @@ namespace WebNews.Controllers
     {
         public ActionResult Index(PortalPage currentPage)
         {
+
+            var editingHints = ViewData.GetEditHints<PageViewModel<PortalPage>, PortalPage>();
+            editingHints.AddConnection(viewModel => viewModel.ViewModelFooterText, page => page.FooterText);
             var model = PageViewModel.Create(currentPage);
             return View(model);
         }

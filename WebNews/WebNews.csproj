@@ -261,6 +261,7 @@
     <Compile Include="Models\Pages\BasePage.cs" />
     <Compile Include="Models\Pages\FolderPage.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
+    <Compile Include="Models\Pages\IFooterPage.cs" />
     <Compile Include="Models\Pages\ListPage.cs" />
     <Compile Include="Models\Pages\PersonPage.cs" />
     <Compile Include="Models\Pages\PortalPage.cs" />

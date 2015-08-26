@@ -8,7 +8,7 @@ using EPiServer.SpecializedProperties;
 namespace WebNews.Models.Pages
 {
     [ContentType(DisplayName = "HomePage", GUID = "A6872269-0173-4489-8640-190A564B65CB", Description = "")]
-    public class HomePage : BaseEditorialPage
+    public class HomePage : BaseEditorialPage, IFooterPage
     {
 
         [Display(
