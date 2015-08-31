@@ -15,8 +15,8 @@ namespace WebNews.Models.ViewModels
         public string EventCreatorEmail { get; set; }
         public string EventCreatorName { get; set; }
         public string EventCreatorPhoneNumber { get; set; }
-        public DateTime EventStartTime { get; set; }
-        public DateTime EventEndTime { get; set; }
+        public string EventStartTime { get; set; }
+        public string EventEndTime { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
         public string Coordinates { get; set; }
@@ -26,11 +26,13 @@ namespace WebNews.Models.ViewModels
                              .ServiceLocation
                              .ServiceLocator
                              .Current.GetInstance<IContentLoader>();
-            EventStartTime.ToString("dd/MM/yyyy hh:mm");
-            if (EventEndTime != null)
+
+            EventStartTime = currentPage.StartTime.ToString("dd/MM/yyyy HH:mm");
+            if (currentPage.EndTime != null)
             {
-                EventEndTime.ToString("dd/MM/yyyy hh:mm");
+                EventEndTime = currentPage.EndTime.Value.ToString("dd/MM/yyyy HH:mm");
             }
+
             if (currentPage.EventPerson != null)
             {
                 EventCreatorEmail = GetCreatorEmail(currentPage);

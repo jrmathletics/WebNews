@@ -31,8 +31,8 @@
 
 <div>
     @Html.PropertyFor(m => m.CurrentPage.EventText)<br />
-    Start Time:@Html.PropertyFor(m => m.CurrentPage.StartTime)<br />
-    End Time:@Html.PropertyFor(m => m.CurrentPage.EndTime)<br />
+    Start Time:@Model.EventStartTime<br />
+    End Time:@Model.EventEndTime<br />
     Ansvarlig for arrangementet:
     <div @Html.EditAttributes(m=>
         m.CurrentPage.EventPerson)>

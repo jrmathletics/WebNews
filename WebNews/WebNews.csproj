@@ -275,6 +275,13 @@
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ListPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
+    <Compile Include="Plugins\Admin\JsonImportTool.aspx.cs">
+      <DependentUpon>JsonImportTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\Admin\JsonImportTool.aspx.designer.cs">
+      <DependentUpon>JsonImportTool.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Extensions\PageDataExtensions.cs" />
   </ItemGroup>
@@ -289,6 +296,7 @@
     <Content Include="ClientResources\googlemaps\nls\sv\Labels.js" />
     <Content Include="ClientResources\googlemaps\WidgetTemplate.css" />
     <Content Include="ClientResources\googlemaps\WidgetTemplate.html" />
+    <Content Include="Plugins\Admin\JsonImportTool.aspx" />
     <Content Include="Static\css\app.css" />
     <Content Include="Static\css\bootstrap-theme.css" />
     <Content Include="Static\css\bootstrap-theme.min.css" />
