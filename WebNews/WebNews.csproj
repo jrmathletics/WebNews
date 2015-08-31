@@ -244,6 +244,8 @@
     <Compile Include="Controllers\ListPageController.cs" />
     <Compile Include="Controllers\PersonPageController.cs" />
     <Compile Include="Controllers\PortalPageController.cs" />
+    <Compile Include="Events\IPublishedPage.cs" />
+    <Compile Include="Events\IPublishingPage.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -259,6 +261,7 @@
     <Compile Include="Models\Pages\ArticlePage.cs" />
     <Compile Include="Models\Pages\BaseEditorialPage.cs" />
     <Compile Include="Models\Pages\BasePage.cs" />
+    <Compile Include="Models\Pages\EventPage.cs" />
     <Compile Include="Models\Pages\FolderPage.cs" />
     <Compile Include="Models\Pages\HomePage.cs" />
     <Compile Include="Models\Pages\IFooterPage.cs" />
@@ -290,7 +293,9 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="App_Data\GeoLiteCity.dat" />
-    <None Include="EPiServerLog.config" />
+    <None Include="EPiServerLog.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="packages.config" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
