@@ -237,8 +237,10 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Business\Rendring\CustomViewEngine.cs" />
+    <Compile Include="Business\UIDescriptors\CoordinatesEditorDescriptor.cs" />
     <Compile Include="Business\UIDescriptors\FolderPageUIDescriptor.cs" />
     <Compile Include="Controllers\ArticlePageController.cs" />
+    <Compile Include="Controllers\EventPageController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ImageFileController.cs" />
     <Compile Include="Controllers\ListPageController.cs" />
@@ -268,6 +270,7 @@
     <Compile Include="Models\Pages\ListPage.cs" />
     <Compile Include="Models\Pages\PersonPage.cs" />
     <Compile Include="Models\Pages\PortalPage.cs" />
+    <Compile Include="Models\ViewModels\EventPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ImageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ListPageViewModel.cs" />
@@ -277,8 +280,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Properties\" />
+    <Folder Include="modulesbin\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\googlemaps\async.js" />
+    <Content Include="ClientResources\googlemaps\Editor.js" />
+    <Content Include="ClientResources\googlemaps\nls\Labels.js" />
+    <Content Include="ClientResources\googlemaps\nls\sv\Labels.js" />
+    <Content Include="ClientResources\googlemaps\WidgetTemplate.css" />
+    <Content Include="ClientResources\googlemaps\WidgetTemplate.html" />
     <Content Include="Static\css\app.css" />
     <Content Include="Static\css\bootstrap-theme.css" />
     <Content Include="Static\css\bootstrap-theme.min.css" />
@@ -324,6 +334,8 @@
     <Content Include="Views\Pages\PortalPage\Index.cshtml" />
     <Content Include="Views\Shared\Partials\Footer.cshtml" />
     <Content Include="Views\Shared\Partials\BreadCrumbs.cshtml" />
+    <Content Include="module.config" />
+    <Content Include="Views\Pages\EventPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

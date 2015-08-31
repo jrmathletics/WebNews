@@ -1,0 +1,20 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@Html.FullRefreshPropertiesMetaData()
+
+@model WebNews.Models.ViewModels.EventPageViewModel
+    @{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<div>
+    @Html.PropertyFor(m => m.CurrentPage.EventText)<br />
+    Start Time:@Html.PropertyFor(m => m.CurrentPage.StartTime)<br />
+    End Time:@Html.PropertyFor(m => m.CurrentPage.EndTime)<br />
+    @Html.PropertyFor(m => m.CurrentPage.Coordinates)<br />
+    Ansvarlig for arrangementet:
+    <div @Html.EditAttributes(m=>m.CurrentPage.EventPerson)>
+        @Html.PropertyFor(m => m.CurrentPage.EventPerson)
+        @Model.EventCreatorEmail<br />
+        @Model.EventCreatorPhoneNumber
+    </div>
+
+</div>

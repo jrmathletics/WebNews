@@ -22,12 +22,12 @@ namespace WebNews.Controllers
             var serviceLocator =
                 EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<EPiServer.IContentLoader>();
             var children = serviceLocator.GetChildren<BaseEditorialPage>(currentPage.ContentLink).ToList();
-            
+
             model.ChildPages = children.FilterForVisitorAndMenu().ToList();
-            
+
             return View(model);
         }
     }
 
-    
+
 }

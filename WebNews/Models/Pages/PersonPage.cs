@@ -56,7 +56,7 @@ namespace WebNews.Models.Pages
 
 
         [CultureSpecific]
-        [Required (ErrorMessage = "E-post må være fylt ut!")]
+        [Required(ErrorMessage = "E-post må være fylt ut!")]
         [Display(
             Name = "E-postadresse",
             GroupName = SystemTabNames.Content,
