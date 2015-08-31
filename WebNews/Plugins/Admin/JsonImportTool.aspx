@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+      Page ID:  <input type="text" id ="PageID"/>
+                <input type="submit" id="submitButton"/>
     </div>
     </form>
 </body>

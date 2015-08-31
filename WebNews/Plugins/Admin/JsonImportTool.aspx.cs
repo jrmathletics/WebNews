@@ -3,13 +3,10 @@ using EPiServer.PlugIn;
 
 namespace WebNews.Plugins.Admin
 {
-    [GuiPlugIn(DisplayName = "Json Import Tool",
-        Description = "Example",
-        Area = PlugInArea.AdminMenu,
-        Url = "~/Plugin/Admin/JsonImportTool.aspx")]
-    public partial class AdminTest : SimplePage
+    public partial class JsonImportTool : System.Web.UI.Page
     {
         public string PluginDisplayString { get; set; }
+        public string PageId { get; set; }
 
     }
 }

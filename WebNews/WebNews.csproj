@@ -243,6 +243,7 @@
     <Compile Include="Controllers\EventPageController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ImageFileController.cs" />
+    <Compile Include="Controllers\JsonImportToolController.cs" />
     <Compile Include="Controllers\ListPageController.cs" />
     <Compile Include="Controllers\PersonPageController.cs" />
     <Compile Include="Controllers\PortalPageController.cs" />
