@@ -8,9 +8,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        Skriv inn ID på den siden du vil opprette alle de nye sidene fra json under:
     <div>
-      Page ID:  <input type="text" id ="PageID"/>
-                <input type="submit" id="submitButton"/>
+        Page ID: 
+        <input type="text" id="PageID" />
+        <input type="submit" value="Trykk her" />
     </div>
     </form>
 </body>

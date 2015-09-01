@@ -34,8 +34,7 @@
     Start Time:@Model.EventStartTime<br />
     End Time:@Model.EventEndTime<br />
     Ansvarlig for arrangementet:
-    <div @Html.EditAttributes(m=>
-        m.CurrentPage.EventPerson)>
+    <div @Html.EditAttributes(m=>m.CurrentPage.EventPerson)>
         @Html.PropertyFor(m => m.CurrentPage.EventPerson)
         @Model.EventCreatorEmail<br />
         @Model.EventCreatorPhoneNumber

@@ -48,5 +48,10 @@ namespace WebNews.Models.Pages
         [EditorDescriptor(EditorDescriptorType = typeof(CoordinatesEditorDescriptor))]
         public virtual string Coordinates { get; set; }
 
+        [ScaffoldColumn(false)]
+        public virtual double Longitude { get; set; }
+        [ScaffoldColumn(false)]
+        public virtual double Latitude { get; set; }
+
     }
 }

@@ -19,7 +19,6 @@ namespace WebNews.Models.ViewModels
         public string EventEndTime { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
-        public string Coordinates { get; set; }
         public EventPageViewModel(EventPage currentPage) : base(currentPage)
         {
             ServiceLocator = EPiServer
@@ -38,11 +37,8 @@ namespace WebNews.Models.ViewModels
                 EventCreatorEmail = GetCreatorEmail(currentPage);
                 EventCreatorPhoneNumber = GetCreatorPhoneNumber(currentPage);
             }
-            if (currentPage.Coordinates != null)
-            {
-                Coordinates = currentPage.Coordinates;
-                GetPosition(Coordinates);
-            }
+            Latitude = currentPage.Latitude;
+            Longitude = currentPage.Longitude;
 
         }
 
@@ -54,14 +50,6 @@ namespace WebNews.Models.ViewModels
         public string GetCreatorName(EventPage currentPage)
         {
             return ServiceLocator.Get<PersonPage>(currentPage.EventPerson).FirstName;
-        }
-
-        public void GetPosition(string coordinates)
-        {
-            char[] splitter = { ',' };
-            string[] coords = coordinates.Split(splitter);
-            Longitude = Double.Parse(coords[1]);
-            Latitude = Double.Parse(coords[0]);
         }
 
         public string GetCreatorPhoneNumber(EventPage currentPage)
